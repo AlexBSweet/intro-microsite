@@ -29,6 +29,20 @@
 
     </section>
 
+    <section class="two-info">
+        <p></p>
+    </section>
+
+
+
+    <section class="variable-animation">
+        <p>INTRO SANS IS VARIABLE</p>
+    </section>
+
+
+
+
+
     <section class="counting">
         <div class="styles">
             <h1 id="styles"> 00 </h1>
@@ -38,19 +52,44 @@
     <section class="type-tester">
         <div class="options">
 
+            <div class="option">
+                <label>Type Size <span class="typesize-output">200px</span> </label>
+                <input name="typesize" type="range" value=200 min=12 max=400>
+            </div>
+
+            <div class="option">
+                    <label>Weight <span class="typesize-output">60</span> </label>
+                    <input name="weight" type="range" value=60 min=45 max=150 step=0.1>
+            </div>
+
+            <div class="option">
+                    <label>Slant <span class="typesize-output">0</span> </label>
+                    <input name="slant" type="range" value=0 min=0 max=1 step=0.01>
+            </div>
+
+            <div class="option">
+                    <label>Instances </label>
+                    <select>
+                            <option value="Extra-Light">Extra-Light</option>
+
+                    </select>
+            </div>
+
         </div>
-        <div class="type-edit">
-            <h1>Try Intro...</h1>
-        </div>
+
+
+
+
+        <div class="type-output" contenteditable="true"> Try Intro...</div>
     </section>
 
 
        <!------------------------------------------------------>
-
-    <script src="pixi.min.js"></script>
+    <script src="type-tester.js"></script>
+    <!-- <script src="pixi.min.js"></script>
     <script src="pixi-filters.js"></script>
-    <script src="intro.js"></script>
-    <script src="countUp.min.js"></script>
+    <script src="intro.js"></script> -->
+    <!-- <script src="countUp.min.js"></script> -->
     <script src="main.js"></script>
 
 

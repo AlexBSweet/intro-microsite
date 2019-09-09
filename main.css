@@ -1,6 +1,6 @@
 @font-face{
     font-family: Intro;
-    src: url('fonts/Intro-VariableGX.ttf');
+    src: url('fonts/Intro-Variable1.09GX.ttf');
 }
 body{
     background-color: #000;
@@ -8,11 +8,6 @@ body{
     box-sizing: border-box;
     overflow-x: hidden;
     font-family: Intro;
-}
-h1{
-    font-family: Intro;
-    font-size: 144px;
-    font-variation-settings: 'wght' 1200;
 }
 header{
     width:100%;
@@ -38,14 +33,156 @@ section.one-intro{
     text-align: center;
     display: inline-block;
 }
+section.variable-animation{
+    height:100vh;
+    background-color:goldenrod;
+}
+section.counting{
+    height:100vh;
+    background-color:gray;
+}
 
 section.type-tester{
-    background-color: gray;
-    height:100vh;
+    background-color: rgb(243, 112, 112);
+    /* height:100vh; */
     width:100vw;
+    font-size: 200px;
+    font-variation-settings: 'wght' 45;
 }
-div.type-edit{
-    height:80%;
-    justify-content: center;
+div.option{
+    width:20%;
+    max-height: 100px;
+}
+section.type-tester label{
+    font-size: 18px;
+    
+    margin-bottom:20px;
+    display:flex;
+    justify-content: space-between;
     align-items: center;
 }
+div.type-output{
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* INPUT STYLES --------------------------------------------------------------------------------------- */
+
+select{
+    display:block;
+}
+input[type=range]{
+    width: 100%;
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 100%; /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+    display:block;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  input[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  }
+  input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+  
+    /* Hides the slider so custom styles can be added */
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #e6e6e6;
+    cursor: pointer;
+    margin-top: -7px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  }
+  /* All the same stuff for Firefox */
+  input[type=range]::-moz-range-thumb {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #e6e6e6;
+    cursor: pointer;
+  }
+  
+  /* All the same stuff for IE */
+  input[type=range]::-ms-thumb {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #e6e6e6;
+    cursor: pointer;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+    background: #e6e6e6;
+    opacity: 0.8;
+  }
+  
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    opacity: 1;
+  }
+  
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #e6e6e6;
+      opacity: 0.8;
+  }
+  
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #e6e6e6;
+    opacity: 0.8;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #e6e6e6;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #e6e6e6;
+      opacity: 0.8;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #367ebd;
+    opacity: 1;
+  }
