@@ -7,7 +7,7 @@
 <body>
 
     <!------------------------------------------------------>
-    <header class="nav">
+    <!-- <header class="nav">
         <div class="nav-left">
                 <p>INTRO SANS</p>
         </div>
@@ -17,26 +17,43 @@
                 <p>SPECIMEN</p>
         </div>
         
-    </header>
+    </header>  -->
 
 
     <!------------------------------------------------------>
-    <section class="one-intro">
+     <section class="one-intro">
 
 
                     <img src="assets/introtext.svg">
       
 
-    </section>
+    </section> -->
 
-    <section class="two-info">
+     <section class="two-info">
         <p></p>
     </section>
 
 
 
     <section class="variable-animation">
-        <p>INTRO SANS IS VARIABLE</p>
+        <div>
+            <p class="animated-text-one">
+                <span>V</span>
+                <span>A</span>
+                <span>R</span>
+                <span>I</span>
+                <span>A</span>
+                <span>B</span>
+                <span>L</span>
+                <span>E</span>
+                <span>,</span>
+            </p>
+            <p class="animated-text-one">
+                <span>E</span>
+                <span>H</span>
+                <span>?</span>
+            </p>
+        </div>
     </section>
 
 
@@ -44,12 +61,33 @@
 
 
     <section class="counting">
-        <div class="styles">
-            <h1 id="styles"> 00 </h1>
+        <div id="styles">
+            0
         </div>
-    </section>
+        <div id="start-button">Start</div>
+    </section> 
 
     <section class="type-tester">
+
+           <div class="instances">
+                    <label>Instances </label>
+                    <select>
+                            <option data-style="45" value="Extra-Light">Extra-Light</option>
+                            <option value="Extra-Light">Extra-Light Italic</option>
+                            <option value="Extra-Light">Light</option>
+                            <option value="Extra-Light">Light Italic</option>
+                            <option value="Extra-Light">Regular</option>
+                            <option value="Extra-Light">Regular Italic</option>
+                            <option value="Extra-Light">Medium</option>
+                            <option value="Extra-Light">Medium Italic</option>
+                            <option value="Extra-Light">Semi-Bold</option>
+                            <option value="Extra-Light">Semi-Bold Italic</option>
+                            <option value="Extra-Light">Bold</option>
+                            <option value="Extra-Light">Bold Italic</option>
+                            <option value="Extra-Light">Black</option>
+                            <option value="Extra-Light">Black Italic</option>
+                    </select>
+            </div> 
         <div class="options">
 
             <div class="option">
@@ -68,13 +106,14 @@
             </div>
 
             <div class="option">
-                    <label>Instances </label>
-                    <select>
-                            <option value="Extra-Light">Extra-Light</option>
-
-                    </select>
+                <label>Leading <span class="leading-output">0</span> </label>
+                <input name="leading" type="range" value=0 min=0 max=1 step=0.01>
             </div>
 
+            <div class="option">
+                <label>Tracking <span class="tracking-output">0</span> </label>
+                <input name="tracking" type="range" value=0 min=-0.05 max=.15 step=0.01>
+            </div>
         </div>
 
 
@@ -89,7 +128,7 @@
     <!-- <script src="pixi.min.js"></script>
     <script src="pixi-filters.js"></script>
     <script src="intro.js"></script> -->
-    <!-- <script src="countUp.min.js"></script> -->
+    <script src="countup.js"></script>
     <script src="main.js"></script>
 
 

@@ -1,7 +1,9 @@
-// let countUp = new CountUp('styles', 5234);
-// if (!countUp.error) {
-//   countUp.start();
-// } else {
-//   console.error(countUp.error);
-// }
-// countUp.start(() => console.log('Complete!'));
+const startButton = document.querySelector('#start-button')
+
+
+
+
+startButton.addEventListener('click', function(){
+    var c = new CountUp('styles',0,100)
+    c.start()
+})
