@@ -8,6 +8,9 @@ body{
     box-sizing: border-box;
     overflow-x: hidden;
     font-family: Intro;
+    font-variation-settings: 'wght' 60;
+    line-height:1.8;
+    font-size: 20px;
 }
 header{
     width:100%;
@@ -40,6 +43,18 @@ section.one-intro{
 
 
 /* TYPE INFO SECTION -------------------------------------------------------- */
+
+section.two-info{
+  display:flex;
+  height: 50vh;
+  padding: 60px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+section.two-info div{
+  width:50%;
+  margin-top: 100px;
+}
 
 
 
@@ -98,19 +113,70 @@ p.animated-text-one span:nth-child(2) {
 
 /* COUNTING SECTION -------------------------------------------------------- */
 
-section.counting{
-    height:100vh;
-    background-color:gray;
+
+section.counting input{
+  background: transparent;
+  border-color: transparent;
+  pointer-events:none;
+  font-size: 200px;
+  font-family: Intro;
+  font-variation-settings: 'wght' 60;
+  width: 50%;
+  color: #fff;
+}
+section.counting p{
+  width:50%;
+  font-size: 120px;
+  font-variation-settings: 'wght' 60;
+  margin: 60px 0;
+  color:#fa5454;
+}
+section.counting div{
+  padding: 0px 60px;
+  display:flex;
+  justify-content: space-between;
+  border-top: 1px solid #fff;
+}
+section.counting div:nth-child(3){
+  border-bottom: 1px solid #fff;
+}
+
+input.counter-two{
+  text-align: right;  
+}
+div.counter-three-container p,
+div.counter-one-container p{
+  text-align: right;
+}
+@keyframes fadeIn{
+  0%{opacity:0;}
+  100%{opacity:1;}
 }
 
 
 
 
 
+
+/* CHARACTER VIEWER SECTION -------------------------------------------------------- */
+
+section.character-viewer{
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  padding: 150px 40px;
+}
+section.character-viewer div{
+  text-align: center;
+  min-height: 90px;
+  font-variation-settings: 'wght' 70;
+}
+
+
+
 /* TYPE TESTER SECTION -------------------------------------------------------- */
 
 section.type-tester{
-    background-color: rgb(243, 112, 112);
+    background-color:#fa5454;
     padding-top:80px;
     width:100vw;
     font-size: 200px;
@@ -186,6 +252,7 @@ select{
   font-size:12px;
 }
 input[type=range]{
+    pointer-events: all;
     width: 100%;
     -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
     width: 100%; /* Specific width is required for Firefox. */
