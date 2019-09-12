@@ -8,17 +8,20 @@
 <body>
 
     <!------------------------------------------------------>
-    <!-- <header class="nav">
+    <header class="nav">
         <div class="nav-left">
-                <p>INTRO SANS</p>
+                <a href="#">SWANTYPE</a>
+        </div>
+        <div>
+          <p>INTRO SANS</p>
         </div>
         <div class="nav-right">
-                <p>TRY</p>
-                <p>DOWNLOAD</p>
-                <p>SPECIMEN</p>
+                <a href="#type-tester">Try Intro</a>
+                <a href="#">Download</a>
+                <a href="#">Specimen</a>
         </div>
         
-    </header>  -->
+    </header> 
 
 
     <!------------------------------------------------------>
@@ -86,24 +89,33 @@
 
 
 
+    <section class="draggable-section" id="container">
+      <div class="drag-text-animation"><p>DRAG THE NUMBERS</p></div>
+      <img id="item" src="test.svg">
+    </section>
 
+
+
+
+    <div class="character-viewer-text">Meet the characters</div>
     <section class="character-viewer">
+      <section class="grid-container">
             <div>A</div>
             <div>B</div>
             <div>C</div>
             <div>D</div>
             <div>E</div>
-           <div>F</div>
+            <div>F</div>
             <div>G</div>
             <div>H</div>
             <div>I</div>
             <div>J</div>
-           <div>K</div>
+            <div>K</div>
             <div>L</div>
             <div>M</div>
             <div>N</div>
             <div>O</div>
-           <div>P</div>
+            <div>P</div>
             <div>Q</div>
             <div>R</div>
             <div>S</div>
@@ -192,7 +204,7 @@
           <div>&#37;</div>
             <div>&#38;</div>
           <div>&#64;</div>
-              <div>&#167;</div>
+              <!--SECTION SYMBOL <div>&#167;</div> -->
             <div>&#169;</div>
           <div>&#174;</div>
            <div>&#8482;</div>
@@ -223,8 +235,6 @@
              <div>&#172;</div>
            <div>&#60;</div>
             <div>&#62;</div>
-            <div>&#8924;</div>
-            <div>&#8925;</div>
             <div>&#176;</div>
           <div>&#37;</div>
             <div>&#137;</div>
@@ -282,9 +292,9 @@
           <div>&#218;</div>
           <div>&#219;</div>
           <div>&#220;</div>
-          <div>&#221;</div>
+          <div>&#221;</div> 
           <div>&#222;</div>
-          <div>&#223;</div>
+          <!--GERMAN SHARP S <div>&#223;</div> -->
           <div>&#372;</div>
           <div>&#373;</div>
           <div>&#374;</div>
@@ -321,6 +331,9 @@
           <div>&#253; </div>
           <div> &#254;</div>
           <div>&#255;</div>
+      </section>
+      <div class="character-container">0</div>
+      <div class="character-cursor"></div>
     </section>
 
 
@@ -328,9 +341,17 @@
 
 
 
-    <section class="type-tester">
+    <section id="type-tester" class="type-tester">
+      <div class="options-top">
 
-           <div class="instances">
+
+          <div class="paragraph-style">
+              <p class="paragraph-left">Left</p>
+              <p class="paragraph-center">Center</p>
+              <p class="paragraph-right">Right</p>
+          </div>
+
+           <!-- <div class="instances">
                     <label>Instances </label>
                     <select>
                             <option data-style="45" value="Extra-Light">Extra-Light</option>
@@ -348,7 +369,19 @@
                             <option value="Extra-Light">Black</option>
                             <option value="Extra-Light">Black Italic</option>
                     </select>
-            </div> 
+          </div>  -->
+          <div class="color-circles">
+            <div class="black-circle"></div>
+            <div class="red-circle"></div>
+            <div class="gray-circle"></div>
+            <div class="green-circle"></div>
+          </div>
+          <div class="ipsum">
+            <p>(Give me some ipsum)</p>
+          </div>
+    </div>
+
+
         <div class="options">
 
             <div class="option">
@@ -357,22 +390,22 @@
             </div>
 
             <div class="option">
-                    <label>Weight <span class="typesize-output">60</span> </label>
+                    <label>Weight <span class="weight-output">60</span> </label>
                     <input name="weight" type="range" value=60 min=45 max=150 step=0.1>
             </div>
 
             <div class="option">
-                    <label>Slant <span class="typesize-output">0</span> </label>
+                    <label>Slant <span class="slant-output">0</span> </label>
                     <input name="slant" type="range" value=0 min=0 max=1 step=0.01>
             </div>
 
             <div class="option">
-                <label>Leading <span class="leading-output">0</span> </label>
-                <input name="leading" type="range" value=0 min=0 max=1 step=0.01>
+                <label>Line Height <span class="line-height-output">1</span> </label>
+                <input name="leading" type="range" value=1 min=0.5 max=2 step=0.01>
             </div>
 
             <div class="option">
-                <label>Tracking <span class="tracking-output">0</span> </label>
+                <label>Letter Spacing <span class="spacing-output">0</span> </label>
                 <input name="tracking" type="range" value=0 min=-0.05 max=.15 step=0.01>
             </div>
         </div>
@@ -380,12 +413,12 @@
 
 
 
-        <div class="type-output" contenteditable="true"> Try Intro...</div>
+        <div class="type-output" contenteditable="true">Try Intro...</div>
     </section>
 
 
        <!------------------------------------------------------>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script src="jquery.js"></script> -->
 
     <script src="type-tester.js"></script>
     <!-- <script src="pixi.min.js"></script>
