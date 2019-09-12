@@ -1,4 +1,62 @@
 
+// INTRO GRID SECTION
+
+const introGrid = document.querySelector('section.intro-grid')
+const introDivs = introGrid.querySelectorAll('div')
+
+introGrid.addEventListener('mousemove', (event)=>{
+  
+  const x = event.pageX
+  const y = event.pageY
+  
+  introDivs.forEach(div=>{
+    
+    var rect = div.getBoundingClientRect();
+    var imgX = rect.left + 20
+    var imgY = rect.top 
+    
+    var diffX = x-imgX
+    var diffY = y-imgY
+    
+    var radians = Math.atan2(diffY, diffX)
+    var angle = radians * 180 / Math.PI
+    
+    div.style.transform = `rotate(${angle}deg)`
+    
+  })
+})
+
+const colors = [
+  'red',
+  'orange', 
+  'yellow', 
+  'lavender', 
+  'yellowgreen', 
+  'lightblue'
+]
+
+let color = 0
+introDivs.forEach(div=>{
+  div.addEventListener('mouseover', ()=>{
+    color = color +1
+    if(color>colors.length){
+      color=0
+    }
+    div.style.color= colors[color]
+
+    setTimeout(function(){
+      div.style.color = '#8c8c8c'
+    }, 10000)
+  })
+})
+
+
+
+
+
+
+
+
 
 // COUNTING ANIIMATION SECTION
 
@@ -87,83 +145,122 @@ const counterThree = document.querySelector('input[name="counter-three"]')
 
     // DRAGGABLE SECTION
 
-    const draggableDiv = document.querySelector('div.draggable')
-    const draggableSection = document.querySelector('section.draggable-section')
+    // const draggableDiv = document.querySelector('div.draggable')
+    // const draggableSection = document.querySelector('section.draggable-section')
 
-    // draggableDiv.addEventListener('mousedown', (e)=>{
-    //   const X = e.pageX
-    //   const Y = e.pageY
+    // var dragItem = document.querySelector("#item");
+    // var container = document.querySelector("#container");
 
-    //   const draggableTop = draggableSection.offsetTop
-    //   const topY = Y - draggableTop
+    // var active = false;
+    // var currentX;
+    // var currentY;
+    // var initialX;
+    // var initialY;
+    // var xOffset = 0;
+    // var yOffset = 0;
 
-    //   draggableDiv.style.top = topY +'px'
-    //   draggableDiv.style.left = X + 'px'
-    //   console.log(X, topY)
-    // })
+    // container.addEventListener("touchstart", dragStart, false);
+    // container.addEventListener("touchend", dragEnd, false);
+    // container.addEventListener("touchmove", drag, false);
 
+    // container.addEventListener("mousedown", dragStart, false);
+    // container.addEventListener("mouseup", dragEnd, false);
+    // container.addEventListener("mousemove", drag, false);
 
-    var dragItem = document.querySelector("#item");
-    var container = document.querySelector("#container");
+    // // clientX and clientY output the coordinates of the mouse when pressed
+    // function dragStart(e) {
+    //   if (e.type === "touchstart") {
+    //     initialX = e.touches[0].clientX - xOffset;
+    //     initialY = e.touches[0].clientY - yOffset;
+    //   } else {
+    //     initialX = e.clientX - xOffset;
+    //     initialY = e.clientY - yOffset;
+    //   }
 
-    var active = false;
-    var currentX;
-    var currentY;
-    var initialX;
-    var initialY;
-    var xOffset = 0;
-    var yOffset = 0;
+    //   if (e.target === dragItem) {
+    //     active = true;
+    //   }
+    // }
 
-    container.addEventListener("touchstart", dragStart, false);
-    container.addEventListener("touchend", dragEnd, false);
-    container.addEventListener("touchmove", drag, false);
+    // function dragEnd(e) {
+    //   initialX = currentX;
+    //   initialY = currentY;
 
-    container.addEventListener("mousedown", dragStart, false);
-    container.addEventListener("mouseup", dragEnd, false);
-    container.addEventListener("mousemove", drag, false);
+    //   active = false;
+    // }
 
-    // clientX and clientY output the coordinates of the mouse when pressed
-    function dragStart(e) {
-      if (e.type === "touchstart") {
-        initialX = e.touches[0].clientX - xOffset;
-        initialY = e.touches[0].clientY - yOffset;
-      } else {
-        initialX = e.clientX - xOffset;
-        initialY = e.clientY - yOffset;
-      }
-
-      if (e.target === dragItem) {
-        active = true;
-      }
-    }
-
-    function dragEnd(e) {
-      initialX = currentX;
-      initialY = currentY;
-
-      active = false;
-    }
-
-    function drag(e) {
-      if (active) {
+    // function drag(e) {
+    //   if (active) {
       
-        e.preventDefault();
+    //     e.preventDefault();
       
-        if (e.type === "touchmove") {
-          currentX = e.touches[0].clientX - initialX;
-          currentY = e.touches[0].clientY - initialY;
-        } else {
-          currentX = e.clientX - initialX;
-          currentY = e.clientY - initialY;
-        }
+    //     if (e.type === "touchmove") {
+    //       currentX = e.touches[0].clientX - initialX;
+    //       currentY = e.touches[0].clientY - initialY;
+    //     } else {
+    //       currentX = e.clientX - initialX;
+    //       currentY = e.clientY - initialY;
+    //     }
 
-        xOffset = currentX;
-        yOffset = currentY;
+    //     xOffset = currentX;
+    //     yOffset = currentY;
 
-        setTranslate(currentX, currentY, dragItem);
-      }
-    }
+    //     setTranslate(currentX, currentY, dragItem);
+    //   }
+    // }
 
-    function setTranslate(xPos, yPos, el) {
-      el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
-    }
+    // function setTranslate(xPos, yPos, el) {
+    //   el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+    // }
+
+
+
+
+
+
+// DOWNLOAD SECTION
+
+const downloadSection = document.querySelector('section.download')
+const downloadCircleMain = downloadSection.querySelector('div.download-circle-main')
+const hoverCirclesDown = document.querySelectorAll('div.hover-circle-down')
+const hoverCirclesUp = document.querySelectorAll('div.hover-circle-up')
+
+downloadCircleMain.addEventListener('mouseover', ()=>{
+
+    hoverCirclesDown.forEach(circle=>{
+      const x = (Math.random() *80)
+      const y = (Math.random() *80)
+
+      console.log(x,y)  
+
+      circle.style.transform = `translate(${x}px, ${y}px)`
+      circle.style.opacity = 1
+    })
+})
+
+downloadCircleMain.addEventListener('mouseout', ()=>{
+    hoverCirclesDown.forEach(circle=>{
+      circle.style.transform = 'translate(0, 0)'
+      circle.style.opacity = 0
+    })
+})
+
+downloadCircleMain.addEventListener('mouseover', ()=>{
+
+  hoverCirclesUp.forEach(circle=>{
+    const x = -(Math.random() *80)
+    const y = -(Math.random() *80)
+
+    console.log(x,y)  
+
+    circle.style.transform = `translate(${x}px, ${y}px)`
+    circle.style.opacity = 1
+  })
+})
+
+downloadCircleMain.addEventListener('mouseout', ()=>{
+  hoverCirclesUp.forEach(circle=>{
+    circle.style.transform = 'translate(0, 0)'
+    circle.style.opacity = 0
+  })
+})
